@@ -1,9 +1,12 @@
-# ReactJs-Template
-template con la configuracion inicial para un proyecto de ReactJs
+# Proyecto Platzi Video
+Basado en el [curso practico de react](https://platzi.com/clases/react-ejs/)  
 
-### Tecnología utilizada:
+**Se crea el proyecto desde cero**
+
+### Tecnología utilizada en el curso:
 - webpack
 - babel
 - eslint
 - sass
 - react
+
