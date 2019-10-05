@@ -1,0 +1,107 @@
+//https://paletton.com/#uid=30u0+0kllllxjshpjxjhnafafep
+
+
+$color-primary-0: #00660D;	// Main Primary color */  
+$color-primary-1: #13B627;  
+$color-primary-2: #078717;  
+$color-primary-3: #003F08;  
+$color-primary-4: #001503;  
+  
+// secondary color
+$color-secondary-0: #014950;	// Main Secondary color (1) */  
+$color-secondary-1: #10848F;  
+$color-secondary-2: #07626A;  
+$color-secondary-3: #002D31;  
+$color-secondary-4: #000F10;  
+  
+//  tertiary color
+$color-tertiary-0: #4F7A00;	// Main Secondary color (2) */  
+$color-tertiary-1: #94DA16;  
+$color-tertiary-2: #6BA208;  
+$color-tertiary-3: #314C00;  
+$color-tertiary-4: #101900;  
+
+//Fonts
+@font-face{
+  font-family: "Font-Food";
+  src: url(/platzi-video-app/multimedia/fonts/handwritten-tomatoes.ttf);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    // background: linear-gradient(to right top, $color-secondary-3, $color-secondary-4);
+    width: 100%;
+    height: 100%;
+    animation: backgroundColor-Linear 10s infinite;
+}
+
+// componentes
+.welcome{
+  @extend .flexbox-center-items;
+  color: #eee;
+  .welcome__title{
+    @extend .food-title;
+    display: inline-flex;
+  }
+  .welcome__subtitle{
+    color: whitesmoke;
+  }
+}
+.section404{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+.section__img404--center{
+    width: 350px;
+    height: 150px;
+    }
+    .section__textinfo404{
+        font-family: sans-serif;
+        color: white;
+        font-size: 2.5em;
+    }
+}
+
+// clases
+.food-title{
+  font-family: 'Font-Food', sans-serif, system;
+}
+
+.flexbox-center-items{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// animaciones
+@keyframes pulse {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.1);}
+    100% {transform: scale(1);}
+  }
+  .pulse {
+    animation: pulse 1s infinite;
+  }
+
+
+  @keyframes backgroundColor-Linear {
+    0% {
+      background-color: $color-secondary-0;
+    }
+    25% {
+      background-color: $color-secondary-1;
+    }
+    50% {
+      background-color: $color-secondary-2;
+    }
+    75% {
+      background-color: $color-secondary-3;
+    }
+    100% {
+      background-color: $color-secondary-4;
+    }
+  }
