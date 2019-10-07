@@ -38,3 +38,8 @@ Una vez tienes listo el repositorio vas a crear una nueva rama para trabajar en 
 Ya que nos encontramos dentro de la rama vamos a instalar React Router, la librería que nos va a permitir manejar rutas dentro de nuestra aplicación:
 
 > npm install react-router-dom --save
+
+*  Se debe agregar al web pack el siguiente codigo, para que acepte las rutas en modo desarrollo
+ > devServer: {
+ >   historyApiFallback: true,
+ > },
