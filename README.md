@@ -31,5 +31,4 @@ ___
 
 ### Routes 
 
-* File Loader
-> npm install --save-dev file-loader
+* Es branch feature/router-redux
