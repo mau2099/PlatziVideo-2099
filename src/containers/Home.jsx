@@ -6,8 +6,6 @@ import Carousel from '../components/Carousel';
 import CarouselItem from '../components/CarouselItem';
 import Footer from '../components/Footer';
 import useInitialState from '../hooks/useInitialState';
-import '../assets/styles/App.scss';
-
 const API = 'http://localhost:3000/initialState';
 
 const Home = () => {
@@ -15,9 +13,7 @@ const Home = () => {
   return initialState.length === 0 ? (
     <h1>Loading...</h1>
   ) : (
-    <div className='App'>
-      <Header />
-      <Search />
+    <>      
       {initialState.mylist.length > 0 && (
         <Categories title='Mi Lista'>
           <Carousel>
@@ -41,8 +37,7 @@ const Home = () => {
           ))}
         </Carousel>
       </Categories>
-      <Footer />
-    </div>
+    </>
   );
 };
 
