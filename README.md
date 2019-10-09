@@ -43,3 +43,7 @@ Ya que nos encontramos dentro de la rama vamos a instalar React Router, la libre
  > devServer: {
  >   historyApiFallback: true,
  > },
+
+> Redux  
+`npm install redux react-redux --save`
+
