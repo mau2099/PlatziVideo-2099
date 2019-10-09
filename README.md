@@ -31,4 +31,8 @@ ___
 
 ### Routes 
 
-* Es branch feature/router-redux
+* React Router
+> ##### Crear rama
+> git checkout -b feature/router-redux
+> Instalar React Router
+> npm install react-router-dom --save
