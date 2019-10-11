@@ -47,3 +47,9 @@ Ya que nos encontramos dentro de la rama vamos a instalar React Router, la libre
 > Redux  
 `npm install redux react-redux --save`
 
+### Gravatar  
+> Antes de instalar un paquete o librería, se aconseja analizarlo, ya que puede traer muchas dependencias que no usaremos y haría más robusta la aplicación
+##### MD5 
+ algoritmo criptografico para crear hash a partir de un correo electronico  
+`npm install md5 --save`
+
