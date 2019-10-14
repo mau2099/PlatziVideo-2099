@@ -45,9 +45,10 @@ const Login = (props) => {
             Iniciar sesión
           </button>
           <div className="login__container--remember-me">
-            <label htmlFor="cbox1">Recuérdame</label>
-            <input type="checkbox" id="cbox1" value="first_checkbox" />
-
+            <label htmlFor="cbox1">
+              Recuérdame
+              <input type="checkbox" id="cbox1" value="first_checkbox" />
+            </label>
             <a href="/">Olvidé mi contraseña</a>
           </div>
         </form>

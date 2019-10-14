@@ -10,6 +10,7 @@ import { logOutRequest } from "../actions";
 const Header = (props) => {
   const { user = {} } = props;
   const hasUser = Object.keys(user).length > 0;
+  console.log(`Usuario existente: ${hasUser}`);
   const handleLogout = (props) => {
     props.logOutRequest({});
   };
