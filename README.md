@@ -55,3 +55,21 @@ Ya que nos encontramos dentro de la rama vamos a instalar React Router, la libre
 
 ### ClassNames
 `npm install --save classnames`
+
+### Redux DevTools
+Agregar extension en 
+- [Chorme](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd) 
+- [Firefox](https://addons.mozilla.org/es/firefox/addon/reduxdevtools/)
+###### Instalación
+Una vez instalado dentro de nuestro index.js vamos a añadir el siguiente código:
+
+```javascript
+import { createStore, compose } from ‘redux’;  
+...  
+
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose  
+  
+const store = createStore(reducer, initialState, composeEnhancers  
+```
+  
+  
