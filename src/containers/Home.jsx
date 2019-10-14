@@ -3,6 +3,8 @@ import { connect } from "react-redux";
 import Categories from "../components/Categories";
 import Carousel from "../components/Carousel";
 import CarouselItem from "../components/CarouselItem";
+import Header from "../components/Header";
+import Search from "../components/Search";
 
 // const API = "http://localhost:3000/initialState";
 //const initialState = useInitialState(API);
@@ -10,6 +12,8 @@ import CarouselItem from "../components/CarouselItem";
 const Home = ({ myList, trends, originals }) => {
   return (
     <>
+      {/* <Header /> */}
+      <Search isHome />
       {myList.length > 0 && (
         <Categories title="Mi Lista">
           <Carousel>

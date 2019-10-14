@@ -53,3 +53,5 @@ Ya que nos encontramos dentro de la rama vamos a instalar React Router, la libre
  algoritmo criptografico para crear hash a partir de un correo electronico  
 `npm install md5 --save`
 
+### ClassNames
+`npm install --save classnames`
