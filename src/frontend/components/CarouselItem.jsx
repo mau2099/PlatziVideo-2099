@@ -12,7 +12,7 @@ const CarouselItem = (props) => {
     const { id, cover, title, year, contentRating, duration, isList } = props;
     const handleSetFavorite = () => {
       props.setFavorite({
-        id, cover, title, year, contentRating, duration
+        id, cover, title, year, contentRating, duration,
        })
     }
     const handleDeleteFavorite = (itemId) => {
