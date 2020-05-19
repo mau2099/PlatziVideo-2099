@@ -73,8 +73,9 @@ const renderApp = (req, res) => {
       </StaticRouter>
     </Provider>,
   );
-
-  res.send(setResponse(html, preloadedState, req.hashManifest));
+  const ssr = setResponse(html, preloadedState, req.hashManifest);
+  console.log('SSR String --> ', ssr);
+  res.send(ssr);
 };
 
 app.get('*', renderApp);
