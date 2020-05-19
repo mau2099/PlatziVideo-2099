@@ -11,22 +11,20 @@ const isDev = process.env.ENV === 'development';
 const entries = ['./src/frontend/index.js'];
 
 if (isDev) {
-  entries.push(
-    'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=2000&reload=true',
-  );
+  entries.push('webpack-hot-middleware/client?path=/__webpack_hmr&timeout=2000&reload=true');
 }
 
-const filenameJs = isDev ? 'assets/app.js' : 'assets/app-[hash].js';
+const filenameJs = isDev ? 'assets/app.js' : 'assets/app-[hash].js'; 
 const filenameVendor = isDev ? 'assets/vendor.js' : 'assets/vendor-[hash].js';
-const plugins = isDev
-  ? [new webpack.HotModuleReplacementPlugin()]
-  : [
-      new CompressionWebpackPlugin({
-        test: /\.js$|\.css$/,
-        filename: '[path].gz',
-      }),
-      new ManifestPlugin(),
-    ];
+const plugins = isDev ?
+  [new webpack.HotModuleReplacementPlugin()] :
+  [
+    new CompressionWebpackPlugin({
+      test: /\.js$|\.css$/,
+      filename: '[path].gz',
+    }),
+    new ManifestPlugin(),
+  ];
 
 module.exports = {
   entry: entries,
@@ -55,10 +53,7 @@ module.exports = {
           enforce: true,
           test(module, chunks) {
             const name = module.nameForCondition && module.nameForCondition();
-            return chunks.some(
-              (chunk) =>
-                chunk.name !== 'vendors' && /[\\/]node_modules[\\/]/.test(name),
-            );
+            return chunks.some(chunk => chunk.name !== 'vendors' && /[\\/]node_modules[\\/]/.test(name));
           },
         },
       },
@@ -66,6 +61,14 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        enforce: 'pre',
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'eslint-loader',
+        },
+      },
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
